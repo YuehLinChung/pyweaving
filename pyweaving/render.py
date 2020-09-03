@@ -137,7 +137,7 @@ class ImageRenderer(object):
         num_shafts = len(self.draft.shafts)
 
         for ii, thread in enumerate(self.draft.warp):
-            startx = (num_threads - ii - 1) * self.pixels_per_square
+            startx = (num_threads-(num_threads - ii - 1)-1) * self.pixels_per_square#(num_threads - ii - 1) * 
             endx = startx + self.pixels_per_square
 
             for jj, shaft in enumerate(self.draft.shafts):
